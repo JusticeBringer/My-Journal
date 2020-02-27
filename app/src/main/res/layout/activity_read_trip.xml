@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ReadTripActivity">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/idBackFromTrip"
+        android:layout_width="34dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:clickable="true"
+        android:onClick="onBackTripClick"
+        app:backgroundTintMode="src_in"
+        app:fabCustomSize="32dp"
+        app:fabSize="mini"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back_btn" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/detalii_c_l_torie"
+        android:textColor="#140404"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:fontFamily="@font/poppins_light"
+        app:layout_constraintBottom_toBottomOf="@+id/idBackFromTrip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/idBackFromTrip" />
+
+    <TextView
+        android:id="@+id/idReadTripName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="48dp"
+        android:text="Nume călătorie"
+        android:textColor="#000000"
+        app:fontFamily="@font/montserrat"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+    <TextView
+        android:id="@+id/idReadTripDestination"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Destinație"
+        android:textColor="#050000"
+        app:fontFamily="@font/montserrat"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idReadTripName" />
+
+    <ImageView
+        android:id="@+id/idReadTripPhoto"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginLeft="64dp"
+        app:layout_constraintBottom_toBottomOf="@+id/idReadTripDestination"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.81"
+        app:layout_constraintStart_toEndOf="@+id/idReadTripName"
+        app:layout_constraintTop_toTopOf="@+id/idReadTripName"
+        tools:srcCompat="@tools:sample/backgrounds/scenic[1]" />
+
+    <TextView
+        android:id="@+id/idReadTripWeather"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Vreme călătorie"
+        android:textColor="#000000"
+        app:fontFamily="@font/montserrat"
+        app:layout_constraintEnd_toEndOf="@+id/idReadTripPhoto"
+        app:layout_constraintStart_toStartOf="@+id/idReadTripPhoto"
+        app:layout_constraintTop_toBottomOf="@+id/idReadTripPhoto" />
+
+    <TextView
+        android:id="@+id/idReadTripType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Tip călătorie"
+        android:textColor="#000000"
+        app:fontFamily="@font/montserrat"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idReadTripWeather" />
+
+    <TextView
+        android:id="@+id/idReadTripPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Prețul călătoriei"
+        android:textColor="#000000"
+        app:fontFamily="@font/montserrat"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idReadTripType" />
+
+    <TextView
+        android:id="@+id/textView30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="16dp"
+        android:text="$"
+        android:textColor="#0E0000"
+        app:fontFamily="@font/montserrat"
+        app:layout_constraintStart_toEndOf="@+id/idReadTripPrice"
+        app:layout_constraintTop_toBottomOf="@+id/idReadTripType" />
+
+    <TextView
+        android:id="@+id/idReadTripStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/data_de_nceput"
+        android:textColor="#0A0000"
+        app:fontFamily="@font/montserrat"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idReadTripPrice" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="24dp"
+        android:rotation="180"
+        app:layout_constraintBottom_toBottomOf="@+id/idReadTripStart"
+        app:layout_constraintEnd_toStartOf="@+id/idReadTripEnd"
+        app:layout_constraintStart_toEndOf="@+id/idReadTripStart"
+        app:layout_constraintTop_toBottomOf="@+id/idReadTripPrice"
+        app:srcCompat="@drawable/back_btn" />
+
+    <TextView
+        android:id="@+id/idReadTripEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:text="@string/data_de_sf_r_it"
+        android:textColor="#000000"
+        app:fontFamily="@font/montserrat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idReadTripPrice" />
+
+    <TextView
+        android:id="@+id/textView33"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="24dp"
+        android:text="Experiența călătoriei"
+        android:textColor="#000000"
+        app:fontFamily="@font/montserrat"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idReadTripStart" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

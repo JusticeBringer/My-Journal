@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@android:color/white"
+    tools:context=".LeftMenu"
+    android:onClick="onTripBasicClick">
+
+    <ImageView
+        android:id="@+id/id_fundal_home"
+        android:layout_width="544dp"
+        android:layout_height="342dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/home5_background" />
+
+    <ImageView
+        android:id="@+id/id_icon_hamburger"
+        android:layout_width="34dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="32dp"
+        android:onClick="onDrawerClick"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/hamburger_icon" />
+
+    <TextView
+        android:id="@+id/id_greeting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/salutv"
+        android:textColor="@android:color/black"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        app:fontFamily="@font/poppins_light"
+        app:layout_constraintBottom_toBottomOf="@+id/id_icon_hamburger"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/id_icon_hamburger" />
+
+    <TextView
+        android:id="@+id/id_notite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/ultimele_noti_e"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        app:fontFamily="@font/poppins_light"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id_fundal_home" />
+
+    <TextView
+        android:id="@+id/id_greeting_nume"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/numeutilizator"
+        app:fontFamily="@font/montserrat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id_greeting" />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/idFloatButton"
+        android:layout_width="48dp"
+        android:layout_height="47dp"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="80dp"
+        app:fabCustomSize="48dp"
+        app:fabSize="auto"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/add_btn" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/idRecyclerViewTrips"
+        android:layout_width="420dp"
+        android:layout_height="193dp"
+        android:layout_marginTop="8dp"
+        android:padding="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id_notite" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
